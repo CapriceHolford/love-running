@@ -122,6 +122,7 @@ main {
     color: #ffffff;
 }
 
+
 /* Reasons */
 #reasons {
     width: 90%;
@@ -134,7 +135,8 @@ main {
     font-size: 280%;
 }
 
-#benefits-physical>div #benefits-mental>div {
+#benefits-physical>div 
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -190,7 +192,7 @@ main {
 
 /* Gallery page */
 #photos img {
-    width:100%; 
+    width: 100%;
     line-height: 1em;
 }
 
@@ -211,6 +213,14 @@ main {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a
+}
+
+/* Media query: Large or landscape phones (576px and up) */
+@media screen and (min-width:576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* Media query: For tablets and larger (768px and up) */
@@ -243,6 +253,18 @@ main {
         margin: 0 0.5rem;
     }
 
+    /* Main Content */
+    main {
+        /* Push main content down to accomodate large header */
+        margin-top: 79px;
+    }
+
+    /* Hero */
+#cover-text {
+    width: 300px;
+    right: 50px;
+}
+
     /* Reasons section */
     #benefits-physical,
     #benefits-mental {
@@ -261,44 +283,10 @@ main {
         align-self: flex-end;
     }
 
-
-    /* Main Content */
-    main {
-        /* Push main content down to accomodate large header */
-        margin-top: 79px;
+    /* Gallery */
+    #photos {
+        column-count: 3;
     }
-}
-
-/* Hero */
-#cover-text {
-    width: 300px;
-    right: 50px;
-}
-
-#reasons {
-    width: 90%;
-    margin: 20px auto;
-}
-
-#reasons h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 280%;
-}
-
-#benefits-physical>div,
-#benefits-mental>div {
-    line-height: 20px;
-    margin-bottom: 20px;
-}
-
-#benefits p {
-    padding: 0 20px;
-}
-
-hr {
-    border-top: 1px solid #3a3a3a;
-    margin: 5px 0;
 }
 
 /* Media query: For laptops and larger (992px and up) */
@@ -306,8 +294,13 @@ hr {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+      /* Gallery */
+      #photos {
+        column-count: 4;
+      }
 }
 
+@media screen and (min-width: 1200px) {
 /* Reasons section */
 #benefits {
     display: flex;
@@ -332,4 +325,5 @@ hr {
 
 #benefits-physical>div {
     align-self: flex-end;
+}
 }
